@@ -1,11 +1,14 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib.image import imread
 
 x = np.arange(0, 6, 0.1) # 以0.1 为单位，生成0 到6 的数据 
 y1 = np.sin(x)
 y2 = np.cos(x)
 
-# 绘制图形 
+img = imread('C:\\Users\\wys31\\Pictures\\Saved Pictures\\AG.jpg')
+plt.imshow(img) # 显示图片
+#绘制图形 
 plt.plot(x, y1, label="sin") 
 plt.plot(x, y2, linestyle = "--", label="cos") # 用虚线绘制 
 plt.xlabel("x") # x 轴标签 
